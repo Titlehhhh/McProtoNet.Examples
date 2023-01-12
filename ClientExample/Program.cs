@@ -47,11 +47,7 @@ namespace ClientExample
 
         public void Start(string host, ushort port)
         {
-            Thread thread = new Thread(() => OnStart(host, port))
-            {
-                IsBackground = true
-            };
-            thread.Start();
+            OnStart(host, port);
         }
         private async void OnStart(string host, ushort port)
         {
